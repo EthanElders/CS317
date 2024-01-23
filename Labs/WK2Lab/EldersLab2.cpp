@@ -17,11 +17,7 @@ int main(){
 
     //integer cards for both the dealer and the player, 5 card maximum.
     int dealerCard1, dealerCard2, dealerCard3, dealerCard4, dealerCard5;
-    int card1;
-    int card2;
-    int card3;
-    int card4;
-    int card5;
+    int card1, card2, card3, card4, card5;
     char dealerValue1, dealerValue2, dealerValue3, dealerValue4, dealerValue5;
     char cardValue1, cardValue2, cardValue3, cardValue4, cardValue5;
 
