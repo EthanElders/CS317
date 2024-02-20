@@ -5,6 +5,7 @@
         "ios": "cpp",
         "iomanip": "cpp",
         "string": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "xlocale": "cpp"
     }
 }
