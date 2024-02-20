@@ -84,47 +84,38 @@ int main(){
 
     srand(time(0)); //set seed for random card assignments
 
-    card1=rand()% 13 + 1;
-
+    card1=rand() % 13 + 1;
+    cout << "TEST CARD 1 " << card1 << endl;
     if(card1 == 1){
         cardValue1='A';
         card1=11;
     }
     else if(card1==2){
         cardValue1='2';
-        card1=2;
     }
     else if(card1==3){
         cardValue1='3';
-        card1=3;
     }
     else if(card1==4){
         cardValue1='4';
-        card1=4;
     }
     else if(card1==5){
         cardValue1='5';
-        card1=5;
     }
     else if(card1==6){
         cardValue1='6';
-        card1=6;
     }
     else if(card1==7){
         cardValue1='7';
-        card1=7;
     }
     else if(card1==8){
         cardValue1='8';
-        card1=8;
     }
     else if(card1==9){
         cardValue1='9';
-        card1=9;
     }
     else if(card1==10){
         cardValue1='T';
-        card1=10;
     }
     else if(card1==11){
         cardValue1='J';
@@ -208,39 +199,30 @@ int main(){
     }
     else if(card2==2){
         cardValue2='2';
-        card2=2;
     }
     else if(card2==3){
         cardValue2='3';
-        card2=3;
     }
     else if(card2==4){
         cardValue2='4';
-        card2=4;
     }
     else if(card2==5){
         cardValue2='5';
-        card2=5;
     }
     else if(card2==6){
         cardValue2='6';
-        card2=6;
     }
     else if(card2==7){
         cardValue2='7';
-        card2=7;
     }
     else if(card2==8){
         cardValue2='8';
-        card1=8;
     }
     else if(card2==9){
         cardValue2='9';
-        card1=9;
     }
     else if(card2==10){
         cardValue2='T';
-        card1=10;
     }
     else if(card2==11){
         cardValue2='J';
@@ -327,9 +309,8 @@ int main(){
    cout<<"Dealer's total hand value is "<<dealerHand<<endl<<endl;
    cout<<"Do you want to hit or stay? (h or s)"<<endl<<endl;
    cin>>stayHit; //character for hit or stay
-   if(stayHit=='h' || stayHit=='H'){
+   if(stayHit=='h' || stayHit=='H' && totalHand < 21){
         card3 = rand() % 13 + 1;
-        
         if(card3 == 1){
             cardValue3='A';
             if(totalHand>10){
@@ -365,7 +346,6 @@ int main(){
         }
         else if(card3==10){
             cardValue3='T';
-            card3=10;
         }
         else if(card3==11){
             cardValue3='J';
@@ -379,71 +359,74 @@ int main(){
             cardValue3='K';
             card3=10;
         }
+
+
         cout<<"Your third card is "<<cardValue3<<endl<<endl;
         totalHand += card3;
         cout<<"The total hand value you have is "<<totalHand<<endl<<endl;
 
 
+
         if(totalHand<21){
             cout<<"Do you want to hit or stay? (h or s)"<<endl<<endl;
                 cin>>stayHit; //character for hit or stay
-                if(stayHit=='h'||stayHit=='H'){
+                if(stayHit=='h'||stayHit=='H' && totalHand < 21){
                     card4 = rand() % 13 + 1;
-                cardValue3='A';
-                if(totalHand>10){
-                        card4=1;
+                    if(card4 == 1){
+                        cardValue4='A';
+                        if(totalHand>10){
+                            card4=1;
+                        }
+                        else{
+                            card4=11;
+                        }
+                    }
+                    else if(card4==2){
+                        cardValue4='2';
+                    }
+                    else if(card4==3){
+                        cardValue4='3';
+                    }
+                    else if(card4==4){
+                        cardValue4='4';
+                    }
+                    else if(card4==5){
+                        cardValue4='5';
+                    }
+                    else if(card4==6){
+                        cardValue4='6';
+                    }
+                    else if(card4==7){
+                        cardValue4='7';
+                    }
+                    else if(card4==8){
+                        cardValue4='8';
+                    }
+                    else if(card4==9){
+                        cardValue4='9';
+                    }
+                    else if(card4==10){
+                        cardValue4='T';
+                    }
+                    else if(card4==11){
+                        cardValue4='J';
+                        card4=10;
+                    }
+                    else if(card4==12){
+                        cardValue4='Q';
+                        card4=10;
                     }
                     else{
-                        card4=11;
+                        cardValue4='K';
+                        card4=10;
                     }
-                }
-                else if(card4==2){
-                    cardValue4='2';
-                }
-                else if(card4==3){
-                    cardValue4='3';
-                }
-                else if(card4==4){
-                    cardValue4='4';
-                }
-                else if(card4==5){
-                    cardValue4='5';
-                }
-                else if(card4==6){
-                    cardValue4='6';
-                }
-                else if(card4==7){
-                    cardValue4='7';
-                }
-                else if(card4==8){
-                    cardValue4='8';
-                }
-                else if(card4==9){
-                    cardValue4='9';
-                }
-                else if(card4==10){
-                    cardValue4='T';
-                    card4=10;
-                }
-                else if(card4==11){
-                    cardValue4='J';
-                    card4=10;
-                }
-                else if(card4==12){
-                    cardValue4='Q';
-                    card4=10;
-                }
-                else{
-                    cardValue4='K';
-                    card4=10;
-                }
 
                     cout<<"Your fourth card is "<<cardValue4<<endl<<endl;
                     totalHand+=card4;
                     cout<<"The total hand value you have is "<<totalHand<<endl<<endl;
                     cout<<"Do you want to hit or stay? (h or s)"<<endl<<endl;
                     cin>>stayHit;
-                    if(stayHit=='h'||stayHit=='H'){
+                    if(stayHit=='h'||stayHit=='H' && totalHand<21){
                         card5 = rand() % 13 + 1;
                         if(totalHand>10){
                                 card5=1;
@@ -492,13 +475,22 @@ int main(){
                             cardValue5='K';
                             card5=10;
                         }
-            cout<<"Your fifth card is "<<cardValue5<<endl<<endl;
-            totalHand += card5;
-
-        if(stayHit=='s'||stayHit=='S'){
+                        cout<<"Your fifth card is "<<cardValue5<<endl<<endl;
+                        totalHand += card5;
+                    
+                }
+        }
+   }
+            
+            
+            
+            
+            
             cout<<"The dealers second card is "<<dealerCard2<<endl<<endl;
             dealerHand = dealerCard1 + dealerCard2;
             cout<<"The dealer's total hand value is "<<dealerHand<<endl<<endl;
+
+            dealerCard3 = rand() % 13 + 1;
             if(dealerHand<17){
                 if(totalHand>10){
                     dealerCard3=1;
@@ -547,9 +539,6 @@ int main(){
                     dealerValue3='K';
                     dealerCard3=10;
                 }
-            }
-        }
-    
 
 
    cout<<"The total hand value you have is "<<totalHand<<endl<<endl;
@@ -557,17 +546,118 @@ int main(){
    //He flips the first card and we see his total.
 
    //The dealer draws cards automatically. House rules is that the dealers have to hit until they have a min of 17
-   dealerCard3 = rand() % 13 + 1;
    cout<<"The dealers third card is "<<dealerCard3<<endl<<endl;
    dealerHand+=dealerCard3;
    cout<<"The dealer's total hand value is "<<dealerHand<<endl<<endl;
 
-   dealerCard4 = rand() % 13 + 1;
+    dealerCard4 = rand() % 13 + 1;
+    if(dealerHand<17){
+            if(totalHand>10){
+                dealerCard4=1;
+                dealerValue4='A';
+                }
+                else{
+                dealerCard4=11;
+                dealerValue4='A';
+                }
+            }
+            else if(dealerCard4==2){
+                dealerValue4='2';
+            }
+            else if(dealerCard4==3){
+                dealerValue4='3';
+            }
+            else if(dealerCard4==4){
+                dealerValue4='4';
+            }
+            else if(dealerCard4==5){
+                dealerValue4='5';
+            }
+            else if(dealerCard4==6){
+            dealerValue4='6';
+            }
+            else if(dealerCard4==7){
+                dealerValue4='7';
+            }
+            else if(dealerCard4==8){
+                    dealerValue4='8';
+            }
+            else if(dealerCard4==9){
+                dealerValue4='9';
+            }
+            else if(dealerCard4==10){
+                dealerValue4='T';
+                dealerCard4=10;
+            }
+            else if(dealerCard4==11){
+                dealerValue4='J';
+                dealerCard4=10;
+            }
+            else if(dealerCard4==12){
+                dealerValue4='Q';
+                dealerCard4=10;
+            }
+            else{
+                dealerValue4='K';
+                dealerCard4=10;
+            }
+   
+
    cout<<"The dealers fourth card is "<<dealerCard4<<endl<<endl;
    dealerHand+=dealerCard4;
    cout<<"The dealer's total hand value is "<<dealerHand<<endl<<endl;
+    dealerCard5 = rand() % 13 + 1;
+        if(dealerHand<17){
+            if(totalHand>10){
+                dealerCard5=1;
+                dealerValue5='A';
+                }
+                else{
+                dealerCard5=11;
+                dealerValue5='A';
+                }
+            }
+            else if(dealerCard5==2){
+                dealerValue5='2';
+            }
+            else if(dealerCard5==3){
+                dealerValue5='3';
+            }
+            else if(dealerCard5==4){
+                dealerValue5='4';
+            }
+            else if(dealerCard5==5){
+                dealerValue5='5';
+            }
+            else if(dealerCard5==6){
+                dealerValue5='6';
+            }
+            else if(dealerCard5==7){
+                dealerValue5='7';
+            }
+            else if(dealerCard5==8){
+                dealerValue5='8';
+            }
+            else if(dealerCard5==9){
+                dealerValue5='9';
+            }
+            else if(dealerCard5==10){
+                dealerValue5='T';
+                dealerCard5=10;
+            }
+            else if(dealerCard5==11){
+                dealerValue5='J';
+                dealerCard5=10;
+            }
+            else if(dealerCard5==12){
+                dealerValue5='Q';
+                dealerCard5=10;
+            }
+            else{
+                dealerValue5='K';
+                dealerCard5=10;
+            }
 
-   dealerCard5 = rand() % 13 + 1;
    cout<<"The dealers fifth card is "<<dealerCard5<<endl<<endl;
    dealerHand+=dealerCard5;
    cout<<"The dealer's total hand value is "<<dealerHand<<endl<<endl;
