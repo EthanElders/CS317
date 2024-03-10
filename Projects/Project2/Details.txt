@@ -1,0 +1,16 @@
+	**********COURSE SCHEDULE**********
+
+Prefix  No.   Title                   Credit Hours
+**************************************************
+  MA    308   Network Architecture               2
+ ITE    308          Discrete Math                 3
+  CS    310        Computer Ethics          1
+
+
+**********Billing Information**********
+Tuition                        $1578.00
+Fees                           $162.50
+Scholarship                    $-0.00
+
+Total Due:                     $1740.50
+
