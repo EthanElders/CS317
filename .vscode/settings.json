@@ -6,6 +6,11 @@
         "iomanip": "cpp",
         "string": "cpp",
         "xstring": "cpp",
-        "xlocale": "cpp"
+        "xlocale": "cpp",
+        "istream": "cpp",
+        "atomic": "cpp",
+        "system_error": "cpp",
+        "xiosbase": "cpp",
+        "fstream": "cpp"
     }
 }
