@@ -1,7 +1,7 @@
 	**********COURSE SCHEDULE**********
 
-Prefix  No.   Title                   Credit Hours
+Prefix    No.           Title         Credit Hours
 **************************************************
-  CS    310        Computer Ethics               1
- ITE    308          Discrete Math                 3
-  MA    308   Network Architecture          2
+MA        308      Network Architecture      2           
+ITE       308      Discrete Math             3           
+CS        310      Computer Ethics           1           
