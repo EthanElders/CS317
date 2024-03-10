@@ -1,0 +1,4 @@
+Hand#          Card1          Card2          Card3          Card4          Card5          Total          DealerTotal        W/L/P          Bet          Bank
+  1               A              2              6              2              -              21                4                Def              50          500
+  2               A              K              7              2              -              28               10                Def              50          500
+  3               7              2              Q              6              -              25                6                Def              50          500

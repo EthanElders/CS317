@@ -91,7 +91,7 @@ int main(){
         cout << "3. View Schedule" << endl;
         cout << "4. View Bill" << endl;
         cout << "5. View Details" << endl;
-        cout << "6. Exit" << endl;
+        cout << "6. Exit" << endl << endl;
 
         cin.clear();
         cin.ignore(100, '\n');
@@ -100,7 +100,7 @@ int main(){
         switch (mainMenuOption){
             case 1:
             numOfClasses = 0;
-            cout << "How many classes are you taking? (Enter a number 1-3)" << endl;
+            cout << "How many classes are you taking? (Enter a number 1-3)" << endl << endl;
             cin.clear();
             cin.ignore(100, '\n');
             cin >> numOfClasses;
@@ -123,21 +123,18 @@ int main(){
                         userClass1Num = class1Num;
                         userClass1Name = class1Name;
                         userClass1Credit = class1Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else if(class1Sel == 2){
                         userClass1Pre = class2Pre;
                         userClass1Num = class2Num;
                         userClass1Name = class2Name;
                         userClass1Credit = class2Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else if(class1Sel == 3){
                         userClass1Pre = class3Pre;
                         userClass1Num = class3Num;
                         userClass1Name = class3Name;
                         userClass1Credit = class3Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else{
                         cout << "You have entered an invalid option, please try again" << endl;
@@ -165,21 +162,18 @@ int main(){
                         userClass1Num = class1Num;
                         userClass1Name = class1Name;
                         userClass1Credit = class1Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else if(class1Sel == 2){
                         userClass1Pre = class2Pre;
                         userClass1Num = class2Num;
                         userClass1Name = class2Name;
                         userClass1Credit = class2Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else if(class1Sel == 3){
                         userClass1Pre = class3Pre;
                         userClass1Num = class3Num;
                         userClass1Name = class3Name;
                         userClass1Credit = class3Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else{
                         cout << "You have entered an invalid option, please try again" << endl;
@@ -190,12 +184,6 @@ int main(){
                 
                 do{
                     cout << "Select the second class you would like to take: " << endl;
-                    cout << "\t**********COURSE DETAILS**********" << endl<<endl;
-                    cout << "Option" << setw(6) << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                    cout << "**************************************************" << endl;
-                    cout << "1. " << setw(4) << class1Pre << setw(7) << class1Num << setw(18) << class1Name << setw(16) << class1Credit << endl;
-                    cout << "2. " << setw(4) << class2Pre << setw(7) << class2Num << setw(16) << class2Name << setw(18) << class2Credit << endl;
-                    cout << "3. " << setw(4) << class3Pre << setw(7) << class3Num << setw(23) << class3Name << setw(11) << class3Credit << endl;
                     cin.clear();
                     cin.ignore(100, '\n');
                     cin >> class2Sel;
@@ -207,21 +195,18 @@ int main(){
                         userClass2Num = class1Num;
                         userClass2Name = class1Name;
                         userClass2Credit = class1Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else if(class2Sel == 2){
                         userClass2Pre = class2Pre;
                         userClass2Num = class2Num;
                         userClass2Name = class2Name;
                         userClass2Credit = class2Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else if(class2Sel == 3){
                         userClass2Pre = class3Pre;
                         userClass2Num = class3Num;
                         userClass2Name = class3Name;
                         userClass2Credit = class3Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else{
                         cout << "You have entered an invalid option, please try again" << endl;
@@ -248,21 +233,18 @@ int main(){
                         userClass1Num = class1Num;
                         userClass1Name = class1Name;
                         userClass1Credit = class1Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else if(class1Sel == 2){
                         userClass1Pre = class2Pre;
                         userClass1Num = class2Num;
                         userClass1Name = class2Name;
                         userClass1Credit = class2Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else if(class1Sel == 3){
                         userClass1Pre = class3Pre;
                         userClass1Num = class3Num;
                         userClass1Name = class3Name;
                         userClass1Credit = class3Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else{
                         cout << "You have entered an invalid option, please try again" << endl;
@@ -273,12 +255,6 @@ int main(){
 
                 do{
                     cout << "Select the second class you would like to take: " << endl;
-                    cout << "\t**********COURSE DETAILS**********" << endl<<endl;
-                    cout << "Option" << setw(6) << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                    cout << "**************************************************" << endl;
-                    cout << "1. " << setw(4) << class1Pre << setw(7) << class1Num << setw(18) << class1Name << setw(16) << class1Credit << endl;
-                    cout << "2. " << setw(4) << class2Pre << setw(7) << class2Num << setw(16) << class2Name << setw(18) << class2Credit << endl;
-                    cout << "3. " << setw(4) << class3Pre << setw(7) << class3Num << setw(23) << class3Name << setw(11) << class3Credit << endl;
                     cin.clear();
                     cin.ignore(100, '\n');
                     cin >> class2Sel;
@@ -290,21 +266,18 @@ int main(){
                         userClass2Num = class1Num;
                         userClass2Name = class1Name;
                         userClass2Credit = class1Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else if(class2Sel == 2){
                         userClass2Pre = class2Pre;
                         userClass2Num = class2Num;
                         userClass2Name = class2Name;
                         userClass2Credit = class2Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else if(class2Sel == 3){
                         userClass2Pre = class3Pre;
                         userClass2Num = class3Num;
                         userClass2Name = class3Name;
                         userClass2Credit = class3Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else{
                         cout << "You have entered an invalid option, please try again" << endl;
@@ -316,31 +289,22 @@ int main(){
                 
                 do{
                     cout << "Select the third class you would like to take: " << endl;
-                    cout << "\t**********COURSE DETAILS**********" << endl<<endl;
-                    cout << "Option" << setw(6) << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                    cout << "**************************************************" << endl;
-                    cout << "1. " << setw(4) << class1Pre << setw(7) << class1Num << setw(18) << class1Name << setw(16) << class1Credit << endl;
-                    cout << "2. " << setw(4) << class2Pre << setw(7) << class2Num << setw(16) << class2Name << setw(18) << class2Credit << endl;
-                    cout << "3. " << setw(4) << class3Pre << setw(7) << class3Num << setw(23) << class3Name << setw(11) << class3Credit << endl;
                     cin.clear();
                     cin.ignore(100, '\n');
                     cin >> class3Sel;
                     if (class3Sel == class1Sel || class3Sel == class2Sel){
-                        cout << "You have selected the same option twice. Please try again." << endl;
                     }
                     else if (class3Sel == 1){
                         userClass3Pre = class1Pre;
                         userClass3Num = class1Num;
                         userClass3Name = class1Name;
                         userClass3Credit = class1Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else if(class3Sel == 2){
                         userClass3Pre = class2Pre;
                         userClass3Num = class2Num;
                         userClass3Name = class2Name;
                         userClass3Credit = class2Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
 
                     }
                     else if(class3Sel == 3){
@@ -348,7 +312,6 @@ int main(){
                         userClass3Num = class3Num;
                         userClass3Name = class3Name;
                         userClass3Credit = class3Credit;
-                        cout << "\nThank you for selecting your classes.\n" << endl;
                     }
                     else{
                         cout << "You have entered an invalid option, please try again" << endl;
@@ -376,7 +339,7 @@ int main(){
                 cin >> scholarshipType;
                 if (scholarshipType == 1){
                     scholarship = "Academic";
-                    cout << "Please enter your scholarship amount: ";
+                    cout << "Please enter your scholarship amount: $";
                     cin.clear();
                     cin.ignore(100, '\n');
                     cin >> scholarshipAmnt;
@@ -412,39 +375,33 @@ int main(){
                     switch(scheduleOption){
                         case 1:
                         {
+                            cout << "\t**********COURSE SCHEDULE**********" << endl<<endl;
+                            cout << "Prefix" << setw(6) << "No. " << setw(10) << "Title " << setw(30) << "Credit Hours" << endl;
+                            cout << "**************************************************" << endl;
                             if (numOfClasses == 1){
-                                cout << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                                cout << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                                cout << "**************************************************" << endl;
-                                cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(18) << userClass1Name << setw(16) << userClass1Credit << endl;
+                                cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(23) << left << userClass1Name << setw(18) << userClass1Credit << endl;
                                 break;
                             }
                             else if (numOfClasses == 2){
-                                cout << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                                cout << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                                cout << "**************************************************" << endl;
-                                cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(18) << userClass1Name << setw(16) << userClass1Credit << endl;
-                                cout << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(16) << userClass2Name << setw(18) << userClass2Credit << endl;
+                                cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(23) << left << userClass1Name << setw(18) << userClass1Credit << endl;
+                                cout << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(23) << left << userClass2Name << setw(18) << userClass2Credit << endl;
                                 break;
                             }
                             else{
-                                cout << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                                cout << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                                cout << "**************************************************" << endl;
-                                cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(18) << userClass1Name << setw(16) << userClass1Credit << endl;
-                                cout << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(16) << userClass2Name << setw(18) << userClass2Credit << endl;
-                                cout << setw(4) << userClass3Pre << setw(7) << userClass3Num << setw(23) << userClass3Name << setw(11) << userClass3Credit << endl;
+                                cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(23) << left << userClass1Name << setw(18) << userClass1Credit << endl;
+                                cout << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(23) << left << userClass2Name << setw(18) << userClass2Credit << endl;
+                                cout << setw(4) << userClass3Pre << setw(7) << userClass3Num << setw(23) << left << userClass3Name << setw(18) << userClass3Credit << endl;
                                 break;
                             }
                         }
 
                         case 2:
                         {
+                            outfile << "\t**********COURSE SCHEDULE**********" << endl<<endl;
+                            outfile << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
+                            outfile << "**************************************************" << endl;
                             outfile.open("Schedule.txt");
                             if (numOfClasses == 1){
-                                outfile << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                                outfile << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                                outfile << "**************************************************" << endl;
                                 outfile << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(23) << userClass1Name << setw(16) << userClass1Credit << endl;
                             }
                             else if (numOfClasses == 2){
@@ -521,7 +478,6 @@ int main(){
                                 cout << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
                                 cout << "**************************************************" << endl;
                                 cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(18) << userClass1Name << setw(16) << userClass1Credit << endl;
-                                break;
                             }
                             else if (numOfClasses == 2){
                                 cout << "\t**********COURSE SCHEDULE**********" << endl<<endl;
@@ -529,7 +485,6 @@ int main(){
                                 cout << "**************************************************" << endl;
                                 cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(18) << userClass1Name << setw(16) << userClass1Credit << endl;
                                 cout << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(16) << userClass2Name << setw(18) << userClass2Credit << endl;
-                                break;
                             }
                             else{
                                 cout << "\t**********COURSE SCHEDULE**********" << endl<<endl;
@@ -538,13 +493,13 @@ int main(){
                                 cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(18) << userClass1Name << setw(16) << userClass1Credit << endl;
                                 cout << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(16) << userClass2Name << setw(18) << userClass2Credit << endl;
                                 cout << setw(4) << userClass3Pre << setw(7) << userClass3Num << setw(23) << userClass3Name << setw(11) << userClass3Credit << endl;
-                                break;
                             }
                             cout << "\n\n**********Billing Information**********"<< endl;
                             cout << left << setw(12) << "Tuition" << right << setw(20) << "$" << setprecision(2) << fixed << totalTuition << endl;
                             cout << left << setw(12) << "Fees" << right << setw(20) << "$" << setprecision(2) << fixed << fees << endl;
                             cout << left << setw(12) << "Scholarship" << right << setw(20) << "$" << setprecision(2) << fixed << scholarshipAmnt << endl << endl;
                             cout << left << setw(12) << "Total Due:" << right << setw(20) << "$" << setprecision(2) << fixed << totalDue << endl << endl;
+                            break;
                         }
                         case 2:
                             outfile.open("Details.txt");
