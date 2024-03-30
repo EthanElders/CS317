@@ -1,20 +1,20 @@
 Walmart
-a
-a
-a
-a
-a
+Apple
+Banana
+Orange
+Oreos
+Rice
 
 Hometown Market
-
-
-
-
-
+Apple
+Banana
+Orange
+Oreos
+Rice
 
 Sam's Club
-
-
-
-
-
+Apple
+Banana
+Orange
+Oreos
+Rice

@@ -11,6 +11,7 @@
         "atomic": "cpp",
         "system_error": "cpp",
         "xiosbase": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "iosfwd": "cpp"
     }
 }

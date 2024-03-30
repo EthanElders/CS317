@@ -73,6 +73,7 @@ int main(){
     int detailOption;
 
     ofstream outfile;
+    bool hasSelectedClass = false;
 
     
 
@@ -144,6 +145,7 @@ int main(){
                 }
                 while(class1Sel < 1 || class1Sel > 3);
                 totalHours = userClass1Credit;
+                hasSelectedClass = true;
                 break;
 
                 case 2:
@@ -216,6 +218,7 @@ int main(){
                 }
                 while(class2Sel < 1 || class2Sel > 3 || class2Sel == class1Sel);
                 totalHours = userClass1Credit + userClass2Credit;
+                hasSelectedClass = true;
                 break;
 
                 case 3:
@@ -319,6 +322,7 @@ int main(){
                         cout << "You have entered an invalid option, please try again" << endl;
                     }
                     totalHours = userClass1Credit + userClass2Credit + userClass3Credit;
+                    hasSelectedClass = true;
                     break;
                 }
                 while(class2Sel < 1 || class2Sel > 3 || class2Sel == class1Sel || class3Sel == class2Sel);
@@ -366,6 +370,10 @@ int main(){
 
             //SCHEDULE CASE
             case 3:
+                if (hasSelectedClass == false){
+                    cout << "You must select your classes before you can view your schedule." << endl;
+                    break;
+                }
                 scheduleOption = 0;
                 while(scheduleOption < 1 || scheduleOption > 2){
                     cout << "Please select an option" << endl;
