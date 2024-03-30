@@ -52,10 +52,12 @@ int main(){
     string firstName;
     string lastName;
     int studentID;
-    float scholarshipAmnt;
-    float totalDue;
-    int totalHours;
-    float totalTuition;
+
+    //These are defined to keep false numbers from appearing in the bill output if nothing has been selected
+    float scholarshipAmnt = 0;
+    float totalDue = 0;
+    int totalHours = 0;
+    float totalTuition = 0;
 
     int numOfClasses;
     int class1Sel, class2Sel, class3Sel;
@@ -71,6 +73,7 @@ int main(){
     int detailOption;
 
     ofstream outfile;
+    bool hasSelectedClass = false;
 
     
 
@@ -85,7 +88,7 @@ int main(){
     
     while(mainMenuRun){
 
-        cout << "Please select a menu option: " << endl;
+        cout << "\n\n\nPlease select a menu option: " << endl;
         cout << "1. Select Classes" << endl;
         cout << "2. Enter Scholarship" << endl;
         cout << "3. View Schedule" << endl;
@@ -108,13 +111,13 @@ int main(){
                 case 1:
                 do{
                     class1Sel = 0;
-                    cout << "Select which class you would like to take: " << endl;
                     cout << "\t**********COURSE DETAILS**********" << endl<<endl;
-                    cout << "Option" << setw(6) << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
+                    cout << setw(6) << "Option" << setw(8) << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(21) << "Credit Hours" << endl;
                     cout << "**************************************************" << endl;
-                    cout << "1. " << setw(4) << class1Pre << setw(7) << class1Num << setw(18) << class1Name << setw(16) << class1Credit << endl;
-                    cout << "2. " << setw(4) << class2Pre << setw(7) << class2Num << setw(16) << class2Name << setw(18) << class2Credit << endl;
-                    cout << "3. " << setw(4) << class3Pre << setw(7) << class3Num << setw(23) << class3Name << setw(11) << class3Credit << endl;
+                    cout << left << setw(10) << "1. " << setw(6) << class1Pre << setw(4) << class1Num << setw(23) << class1Name << setw(16) << class1Credit << endl;
+                    cout << left << setw(10) << "2. " << setw(6) << class2Pre << setw(4) << class2Num << setw(23) << class2Name << setw(18) << class2Credit << endl;
+                    cout << left << setw(10) << "3. " << setw(6) << class3Pre << setw(4) << class3Num << setw(23) << class3Name << setw(11) << class3Credit << endl;
+                    cout << "\nSelect which class you would like to take: " << endl;
                     cin.clear();
                     cin.ignore(100, '\n');
                     cin >> class1Sel;
@@ -142,18 +145,19 @@ int main(){
                 }
                 while(class1Sel < 1 || class1Sel > 3);
                 totalHours = userClass1Credit;
+                hasSelectedClass = true;
                 break;
 
                 case 2:
                 
                 do{
-                    cout << "Select the first class you would like to take: " << endl;
                     cout << "\t**********COURSE DETAILS**********" << endl<<endl;
-                    cout << "Option" << setw(6) << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
+                    cout << setw(6) << "Option" << setw(8) << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(21) << "Credit Hours" << endl;
                     cout << "**************************************************" << endl;
-                    cout << "1. " << setw(4) << class1Pre << setw(7) << class1Num << setw(18) << class1Name << setw(16) << class1Credit << endl;
-                    cout << "2. " << setw(4) << class2Pre << setw(7) << class2Num << setw(16) << class2Name << setw(18) << class2Credit << endl;
-                    cout << "3. " << setw(4) << class3Pre << setw(7) << class3Num << setw(23) << class3Name << setw(11) << class3Credit << endl;
+                    cout << left << setw(10) << "1. " << setw(6) << class1Pre << setw(4) << class1Num << setw(23) << class1Name << setw(16) << class1Credit << endl;
+                    cout << left << setw(10) << "2. " << setw(6) << class2Pre << setw(4) << class2Num << setw(23) << class2Name << setw(18) << class2Credit << endl;
+                    cout << left << setw(10) << "3. " << setw(6) << class3Pre << setw(4) << class3Num << setw(23) << class3Name << setw(11) << class3Credit << endl;
+                    cout << "\nSelect which class you would like to take: " << endl;
                     cin.clear();
                     cin.ignore(100, '\n');
                     cin >> class1Sel;
@@ -214,17 +218,18 @@ int main(){
                 }
                 while(class2Sel < 1 || class2Sel > 3 || class2Sel == class1Sel);
                 totalHours = userClass1Credit + userClass2Credit;
+                hasSelectedClass = true;
                 break;
 
                 case 3:
                 do{
-                    cout << "Select the first class you would like to take: " << endl;
                     cout << "\t**********COURSE DETAILS**********" << endl<<endl;
-                    cout << "Option" << setw(6) << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
+                    cout << setw(6) << "Option" << setw(8) << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(21) << "Credit Hours" << endl;
                     cout << "**************************************************" << endl;
-                    cout << "1. " << setw(4) << class1Pre << setw(7) << class1Num << setw(18) << class1Name << setw(16) << class1Credit << endl;
-                    cout << "2. " << setw(4) << class2Pre << setw(7) << class2Num << setw(16) << class2Name << setw(18) << class2Credit << endl;
-                    cout << "3. " << setw(4) << class3Pre << setw(7) << class3Num << setw(23) << class3Name << setw(11) << class3Credit << endl;
+                    cout << left << setw(10) << "1. " << setw(6) << class1Pre << setw(4) << class1Num << setw(23) << class1Name << setw(16) << class1Credit << endl;
+                    cout << left << setw(10) << "2. " << setw(6) << class2Pre << setw(4) << class2Num << setw(23) << class2Name << setw(18) << class2Credit << endl;
+                    cout << left << setw(10) << "3. " << setw(6) << class3Pre << setw(4) << class3Num << setw(23) << class3Name << setw(11) << class3Credit << endl;
+                    cout << "\nSelect which class you would like to take: " << endl;
                     cin.clear();
                     cin.ignore(100, '\n');
                     cin >> class1Sel;
@@ -317,6 +322,7 @@ int main(){
                         cout << "You have entered an invalid option, please try again" << endl;
                     }
                     totalHours = userClass1Credit + userClass2Credit + userClass3Credit;
+                    hasSelectedClass = true;
                     break;
                 }
                 while(class2Sel < 1 || class2Sel > 3 || class2Sel == class1Sel || class3Sel == class2Sel);
@@ -364,6 +370,10 @@ int main(){
 
             //SCHEDULE CASE
             case 3:
+                if (hasSelectedClass == false){
+                    cout << "You must select your classes before you can view your schedule." << endl;
+                    break;
+                }
                 scheduleOption = 0;
                 while(scheduleOption < 1 || scheduleOption > 2){
                     cout << "Please select an option" << endl;
@@ -376,48 +386,45 @@ int main(){
                         case 1:
                         {
                             cout << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                            cout << "Prefix" << setw(6) << "No. " << setw(10) << "Title " << setw(30) << "Credit Hours" << endl;
+                            cout << right << "Prefix" << setw(8) << "No. " << setw(16) << "Title " << setw(20) << "Credit Hours" << endl;
                             cout << "**************************************************" << endl;
                             if (numOfClasses == 1){
-                                cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(23) << left << userClass1Name << setw(18) << userClass1Credit << endl;
+                                cout << left << setw(10) << userClass1Pre << setw(9) << userClass1Num << setw(26) << userClass1Name << setw(12) << userClass1Credit << endl;
                                 break;
                             }
                             else if (numOfClasses == 2){
-                                cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(23) << left << userClass1Name << setw(18) << userClass1Credit << endl;
-                                cout << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(23) << left << userClass2Name << setw(18) << userClass2Credit << endl;
+                                cout << left << setw(10) << userClass1Pre << setw(9) << userClass1Num << setw(26) << userClass1Name << setw(12) << userClass1Credit << endl;
+                                cout << left << setw(10) << userClass2Pre << setw(9) << userClass2Num << setw(26) << userClass2Name << setw(12) << userClass2Credit << endl;
                                 break;
                             }
                             else{
-                                cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(23) << left << userClass1Name << setw(18) << userClass1Credit << endl;
-                                cout << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(23) << left << userClass2Name << setw(18) << userClass2Credit << endl;
-                                cout << setw(4) << userClass3Pre << setw(7) << userClass3Num << setw(23) << left << userClass3Name << setw(18) << userClass3Credit << endl;
+                                cout << left << setw(10) << userClass1Pre << setw(9) << userClass1Num << setw(26) << userClass1Name << setw(12) << userClass1Credit << endl;
+                                cout << left << setw(10) << userClass2Pre << setw(9) << userClass2Num << setw(26) << userClass2Name << setw(12) << userClass2Credit << endl;
+                                cout << left << setw(10) << userClass3Pre << setw(9) << userClass3Num << setw(26) << userClass3Name << setw(12) << userClass3Credit << endl;
                                 break;
                             }
                         }
 
                         case 2:
                         {
-                            outfile << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                            outfile << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                            outfile << "**************************************************" << endl;
                             outfile.open("Schedule.txt");
+                            outfile << "\t**********COURSE SCHEDULE**********" << endl<<endl;
+                            outfile << right << "Prefix" << setw(8) << "No. " << setw(16) << "Title " << setw(20) << "Credit Hours" << endl;
+                            outfile << "**************************************************" << endl;
                             if (numOfClasses == 1){
-                                outfile << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(23) << userClass1Name << setw(16) << userClass1Credit << endl;
+                                outfile << left << setw(10) << userClass1Pre << setw(9) << userClass1Num << setw(26) << userClass1Name << setw(12) << userClass1Credit << endl;
+                                break;
                             }
                             else if (numOfClasses == 2){
-                                outfile << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                                outfile << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                                outfile << "**************************************************" << endl;
-                                outfile << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(23) << userClass1Name << setw(16) << userClass1Credit << endl;
-                                outfile << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(23) << userClass2Name << setw(18) << userClass2Credit << endl;
+                                outfile << left << setw(10) << userClass1Pre << setw(9) << userClass1Num << setw(26) << userClass1Name << setw(12) << userClass1Credit << endl;
+                                outfile << left << setw(10) << userClass2Pre << setw(9) << userClass2Num << setw(26) << userClass2Name << setw(12) << userClass2Credit << endl;
+                                break;
                             }
                             else{
-                                outfile << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                                outfile << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                                outfile << "**************************************************" << endl;
-                                outfile << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(23) << userClass1Name << setw(16) << userClass1Credit << endl;
-                                outfile << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(23) << userClass2Name << setw(18) << userClass2Credit << endl;
-                                outfile << setw(4) << userClass3Pre << setw(7) << userClass3Num << setw(23) << userClass3Name << setw(11) << userClass3Credit << endl;
+                                outfile << left << setw(10) << userClass1Pre << setw(9) << userClass1Num << setw(26) << userClass1Name << setw(12) << userClass1Credit << endl;
+                                outfile << left << setw(10) << userClass2Pre << setw(9) << userClass2Num << setw(26) << userClass2Name << setw(12) << userClass2Credit << endl;
+                                outfile << left << setw(10) << userClass3Pre << setw(9) << userClass3Num << setw(26) << userClass3Name << setw(12) << userClass3Credit << endl;
+                                break;
                             }
                             outfile.close();
                             break;
@@ -473,26 +480,20 @@ int main(){
                     switch(detailOption){
                         case 1:
                         {
+                            cout << "\t**********COURSE SCHEDULE**********" << endl<<endl;
+                            cout << right << "Prefix" << setw(8) << "No. " << setw(16) << "Title " << setw(20) << "Credit Hours" << endl;
+                            cout << "**************************************************" << endl;
                             if (numOfClasses == 1){
-                                cout << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                                cout << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                                cout << "**************************************************" << endl;
-                                cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(18) << userClass1Name << setw(16) << userClass1Credit << endl;
+                                cout << left << setw(10) << userClass1Pre << setw(9) << userClass1Num << setw(26) << userClass1Name << setw(12) << userClass1Credit << endl;
                             }
                             else if (numOfClasses == 2){
-                                cout << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                                cout << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                                cout << "**************************************************" << endl;
-                                cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(18) << userClass1Name << setw(16) << userClass1Credit << endl;
-                                cout << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(16) << userClass2Name << setw(18) << userClass2Credit << endl;
+                                cout << left << setw(10) << userClass1Pre << setw(9) << userClass1Num << setw(26) << userClass1Name << setw(12) << userClass1Credit << endl;
+                                cout << left << setw(10) << userClass2Pre << setw(9) << userClass2Num << setw(26) << userClass2Name << setw(12) << userClass2Credit << endl;
                             }
                             else{
-                                cout << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                                cout << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                                cout << "**************************************************" << endl;
-                                cout << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(18) << userClass1Name << setw(16) << userClass1Credit << endl;
-                                cout << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(16) << userClass2Name << setw(18) << userClass2Credit << endl;
-                                cout << setw(4) << userClass3Pre << setw(7) << userClass3Num << setw(23) << userClass3Name << setw(11) << userClass3Credit << endl;
+                                cout << left << setw(10) << userClass1Pre << setw(9) << userClass1Num << setw(26) << userClass1Name << setw(12) << userClass1Credit << endl;
+                                cout << left << setw(10) << userClass2Pre << setw(9) << userClass2Num << setw(26) << userClass2Name << setw(12) << userClass2Credit << endl;
+                                cout << left << setw(10) << userClass3Pre << setw(9) << userClass3Num << setw(26) << userClass3Name << setw(12) << userClass3Credit << endl;
                             }
                             cout << "\n\n**********Billing Information**********"<< endl;
                             cout << left << setw(12) << "Tuition" << right << setw(20) << "$" << setprecision(2) << fixed << totalTuition << endl;
@@ -503,26 +504,20 @@ int main(){
                         }
                         case 2:
                             outfile.open("Details.txt");
+                            outfile << "\t**********COURSE SCHEDULE**********" << endl<<endl;
+                            outfile << right << "Prefix" << setw(8) << "No. " << setw(16) << "Title " << setw(20) << "Credit Hours" << endl;
+                            outfile << "**************************************************" << endl;
                             if (numOfClasses == 1){
-                                outfile << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                                outfile << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                                outfile << "**************************************************" << endl;
-                                outfile << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(23) << userClass1Name << setw(16) << userClass1Credit << endl;
+                                outfile << left << setw(10) << userClass1Pre << setw(9) << userClass1Num << setw(26) << userClass1Name << setw(12) << userClass1Credit << endl;
                             }
                             else if (numOfClasses == 2){
-                                outfile << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                                outfile << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                                outfile << "**************************************************" << endl;
-                                outfile << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(23) << userClass1Name << setw(16) << userClass1Credit << endl;
-                                outfile << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(23) << userClass2Name << setw(18) << userClass2Credit << endl;
+                                outfile << left << setw(10) << userClass1Pre << setw(9) << userClass1Num << setw(26) << userClass1Name << setw(12) << userClass1Credit << endl;
+                                outfile << left << setw(10) << userClass2Pre << setw(9) << userClass2Num << setw(26) << userClass2Name << setw(12) << userClass2Credit << endl;
                             }
                             else{
-                                outfile << "\t**********COURSE SCHEDULE**********" << endl<<endl;
-                                outfile << "Prefix" << setw(6) << "No. " << setw(8) << "Title " << setw(30) << "Credit Hours" << endl;
-                                outfile << "**************************************************" << endl;
-                                outfile << setw(4) << userClass1Pre << setw(7) << userClass1Num << setw(23) << userClass1Name << setw(16) << userClass1Credit << endl;
-                                outfile << setw(4) << userClass2Pre << setw(7) << userClass2Num << setw(23) << userClass2Name << setw(18) << userClass2Credit << endl;
-                                outfile << setw(4) << userClass3Pre << setw(7) << userClass3Num << setw(23) << userClass3Name << setw(11) << userClass3Credit << endl;
+                                outfile << left << setw(10) << userClass1Pre << setw(9) << userClass1Num << setw(26) << userClass1Name << setw(12) << userClass1Credit << endl;
+                                outfile << left << setw(10) << userClass2Pre << setw(9) << userClass2Num << setw(26) << userClass2Name << setw(12) << userClass2Credit << endl;
+                                outfile << left << setw(10) << userClass3Pre << setw(9) << userClass3Num << setw(26) << userClass3Name << setw(12) << userClass3Credit << endl;
                             }
                             outfile << "\n\n**********Billing Information**********"<< endl;
                             outfile << left << setw(12) << "Tuition" << right << setw(20) << "$" << setprecision(2) << fixed << totalTuition << endl;

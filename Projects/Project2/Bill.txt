@@ -3,7 +3,7 @@
 **********Billing Information**********
 Tuition                        $1578.00
 Fees                           $162.50
-Scholarship                    $200.00
+Scholarship                    $800.00
 
-Total Due:                     $1540.50
+Total Due:                     $940.50
 
