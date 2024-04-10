@@ -1,0 +1,2 @@
+Hand#          Card1          Card2          Card3          Card4          Card5          Total          DealerTotal        W/L/P          Bet          Bank
+  2               J              7              9              4              3               1                8                WIN              10          110
